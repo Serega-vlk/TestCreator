@@ -1,0 +1,17 @@
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<table border="1" cellpadding="1" cellspacing="1" style="width:500px">
+    <caption>Усі тести</caption>
+    <thead>
+    <th>Назва</th>
+    <th>Макстмальна оцінка</th>
+    </thead>
+    <tbody th:each="test : ${tests}">
+    <td th:text="${test.getName()}"/>
+    <td th:text="${test.getTotal()}"/>
+    <td>
+        <form method="post" action="/test/delete">
+            <input type="hidden" name="deleteName" id="deleteName" th:value="${service.getId()}"/>
+            <button type="submit">[[#{user.deleteService}]]</button>
+        </form>
+    <tbody/>
+</table>
