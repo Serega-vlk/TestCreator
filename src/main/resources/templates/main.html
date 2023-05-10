@@ -10,8 +10,13 @@
     <td th:text="${test.getTotal()}"/>
     <td>
         <form method="post" action="/test/delete">
-            <input type="hidden" name="deleteName" id="deleteName" th:value="${service.getId()}"/>
-            <button type="submit">[[#{user.deleteService}]]</button>
+            <input type="hidden" name="deleteName" id="deleteName" th:value="${test.getName()}"/>
+            <button type="submit">Видалити</button>
+        </form>
+    <td>
+        <form method="post" action="/test/marks">
+            <input type="hidden" name="markTestName" id="markTestName" th:value="${test.getName()}"/>
+            <button type="submit">Оцінки</button>
         </form>
     <tbody/>
 </table>

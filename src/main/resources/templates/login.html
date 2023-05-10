@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Ваш телеграм код</title>
+</head>
+<body>
+<br/>
+<br/>
+<form style="text-align:center" th:method="POST" action="/login">
+    <div><label> код: <input type="text" name="code" id="code"/> </label></div>
+    <div><button type="submit">авторизувати</button></div>
+</form>
+</body>
+</html>

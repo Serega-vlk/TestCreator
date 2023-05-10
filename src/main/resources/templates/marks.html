@@ -1,0 +1,16 @@
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<table border="1" cellpadding="1" cellspacing="1" style="width:500px">
+    <caption th:text="${marks.getTestName()}" />
+    <thead>
+    <th>Ім'я</th>
+    <th>Призвіще</th>
+    <th>Група</th>
+    <th>Оцінка</th>
+    </thead>
+    <tbody th:each="mark : ${marks.getMarks()}">
+    <td th:text="${mark.getName()}"/>
+    <td th:text="${mark.getSurname()}"/>
+    <td th:text="${mark.getGroup()}"/>
+    <td th:text="${mark.getMark()}"/>
+    <tbody/>
+</table>
