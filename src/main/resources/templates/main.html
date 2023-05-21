@@ -20,3 +20,14 @@
         </form>
     <tbody/>
 </table>
+<br/>
+<p>Створити тест</p>
+<form method="POST" action="/test/create" th:object="${test}">
+    <label for="name">Назва тесту: </label>
+    <input name="name" th:field="*{name}" id="name">
+    <br/>
+    <label for="total">Максимум балів за тест: </label>
+    <input name="total" th:field="*{total}" id="total">
+    <br/>
+    <button style="margin-left:1px" type="submit" >створити</button>
+</form>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<body>
+<form method="POST" action="/test/addQuestion" th:object="${question}">
+    <label for="text">Питання:</label>
+    <input name="name" th:field="*{text}" id="text">
+    <label for="value">Кількість балів:</label>
+    <input name="value" th:field="*{value}" id="value">
+    <br/>
+    <label for="text1">1 відповідь:</label>
+    <input name="text1" th:field="*{text1}" id="text1">
+    <label for="isCorrect1">правильна відповідь? (+):</label>
+    <input name="isCorrect1" th:field="*{isCorrect1}" id="isCorrect1">
+    <br/>
+    <label for="text2">2 відповідь:</label>
+    <input name="text2" th:field="*{text2}" id="text2">
+    <label for="isCorrect2">правильна відповідь? (+):</label>
+    <input name="isCorrect2" th:field="*{isCorrect2}" id="isCorrect2">
+    <br/>
+    <label for="text3">3 відповідь:</label>
+    <input name="text3" th:field="*{text3}" id="text3">
+    <label for="isCorrect3">правильна відповідь? (+):</label>
+    <input name="isCorrect3" th:field="*{isCorrect3}" id="isCorrect3">
+    <br/>
+    <label for="text4">4 відповідь:</label>
+    <input name="text4" th:field="*{text4}" id="text4">
+    <label for="isCorrect4">правильна відповідь? (+):</label>
+    <input name="isCorrect4" th:field="*{isCorrect4}" id="isCorrect4">
+    <br/>
+    <label for="text5">5 відповідь:</label>
+    <input name="text5" th:field="*{text5}" id="text5">
+    <label for="isCorrect5">правильна відповідь? (+):</label>
+    <input name="isCorrect5" th:field="*{isCorrect5}" id="isCorrect5">
+    <br/>
+    <button type="submit">додати питання</button>
+</form>
+<form method="POST" action="/test/register" >
+    <button type="submit">створити</button>
+</form>
+</body>
+</html>
